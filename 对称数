@@ -1,4 +1,3 @@
-//解法1
 #include <stdio.h>
 
 int main()
@@ -30,22 +29,5 @@ int main()
     if (flag == 1)
         printf("yes");
     else printf("no");
-    return 0;
-}
-
-//解法2
-#include <stdio.h>
-
-int main()
-{
-    int n = 0;
-    int sum = 1;
-    scanf("%d", &n);
-    while(n)
-    {
-       sum*=n;
-       n--;
-    }
-    printf("%d", sum);
     return 0;
 }
