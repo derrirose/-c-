@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int flag = 1;
+    int count = 0;
+    int num[10000];
+    char j;
+    int x;
+    while (scanf("%c", &j) != EOF)
+    {
+        if (j != '\n')
+        {
+            num[count++] = j - '0';
+        }
+        if (j == '\n') break;
+    }
+    int i;
+    for (i = 0; i < count; i++)
+    {
+        if (num[i] == num[count - i - 1])
+            flag = 1;
+        else
+        {
+            flag = 0;
+            break;
+        }
+    }
+    if (flag == 1)
+        printf("yes");
+    else printf("no");
+    return 0;
+}
